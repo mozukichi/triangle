@@ -19,13 +19,15 @@ class Triangle
   end
 end
 
-case Triangle.check_triangle($*[0].to_i, $*[1].to_i, $*[2].to_i)
-when Triangle::EQUILATERAL then
-  puts "正三角形ですね！"
-when Triangle::ISOSCELES then
-  puts "二等辺三角形ですね！"
-when Triangle::SCALENE then
-  puts "不等辺三角形ですね！"
-when Triangle::NOT_TRIANGLE then
-  puts "三角形じゃないです＞＜"
+if $0 == __FILE__ then
+  case Triangle.check_triangle($*[0].to_i, $*[1].to_i, $*[2].to_i)
+  when Triangle::EQUILATERAL then
+    puts "正三角形ですね！"
+  when Triangle::ISOSCELES then
+    puts "二等辺三角形ですね！"
+  when Triangle::SCALENE then
+    puts "不等辺三角形ですね！"
+  when Triangle::NOT_TRIANGLE then
+    puts "三角形じゃないです＞＜"
+  end
 end
